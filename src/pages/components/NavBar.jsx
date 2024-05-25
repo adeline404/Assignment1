@@ -1,8 +1,3 @@
-// import React from 'react';
-// import { LinkContainer } from 'react-router-bootstrap';
-// import { ButtonGroup, Button, Navbar, Container } from 'react-bootstrap';
-// //import './NavBar.css';
-
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -15,8 +10,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'react-router-dom';
-import Logo from "./logo.png";
-//import AdbIcon from '@mui/icons-material/Adb';
+import Logo from "../../assets/logo.png";
 
 const pages = ['Home', 'About Me', 'Projects', 'Services', 'Contact'];
 
@@ -32,7 +26,7 @@ function NavBar() {
     };
 
     return (
-        <AppBar position="static">
+        <AppBar position="static" sx={{ bgcolor: "#BDDBF4" }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Box
@@ -55,10 +49,10 @@ function NavBar() {
                         sx={{
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
+                            fontFamily: 'Verdana, Arial, Helvetica, sans-serif',
+                            fontWeight: 600,
                             letterSpacing: '.001rem',
-                            color: 'white',
+                            color: '#2267A6',
                             textDecoration: 'none',
                         }}
                     >
@@ -126,10 +120,10 @@ function NavBar() {
                             mr: 2,
                             display: { xs: 'flex', md: 'none' },
                             flexGrow: 1,
-                            fontFamily: 'monospace',
+                            fontFamily: 'Verdana, Arial, Helvetica, sans-serif',
                             fontWeight: 700,
                             letterSpacing: '.3rem',
-                            color: 'inherit',
+                            color: '#2267A6',
                             textDecoration: 'none',
                         }}
                     >
@@ -140,9 +134,9 @@ function NavBar() {
                             <Button
                                 key={page}
                                 onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                sx={{ my: 2, color: '#2267A6', display: 'block' }}
                             >
-                                <Link to={`/${page.toLowerCase().replace(' ', '-')}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                <Link to={`/${page.toLowerCase().replace(' ', '-')}`} style={{ textDecoration: 'none', color: 'inherit', fontWeight: "bold" }}>
                                     {page}
                                 </Link>
                             </Button>
