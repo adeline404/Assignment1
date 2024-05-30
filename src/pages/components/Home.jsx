@@ -1,3 +1,4 @@
+// Home.jsx Yik Hei Chan 301347095 30/05/2024
 import * as React from 'react';
 import NavBar from './NavBar.jsx';
 import Box from '@mui/material/Box';

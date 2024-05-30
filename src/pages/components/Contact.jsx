@@ -1,5 +1,7 @@
+// Contact.jsx Yik Hei Chan 301347095 30/05/2024
 import NavBar from './NavBar.jsx';
 import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Zoom from '@mui/material/Zoom';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -16,10 +18,34 @@ export function Contact() {
     const insta = (<Link href="https://www.instagram.com/zzline_/" underline="hover">
         Instagram
     </Link>);
+
+    const [formData, setFormData] = React.useState({
+        firstName: '',
+        lastName: '',
+        contactNumber: '',
+        email: '',
+        message: ''
+    });
+
+    const navigate = useNavigate();
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Store form data in local storage
+        localStorage.setItem('contactFormData', JSON.stringify(formData));
+        // Redirect to Home Page
+        navigate('/');
+    };
+
     return (
         <div>
             <NavBar />
-            <Zoom in={checked}>{<h1>Contact</h1>}</Zoom>
+            <Zoom in={checked}>{<h1>Contact Me</h1>}</Zoom>
             <Box mb={4} display="flex" justifyContent="center" alignItems="center">
                 <List sx={{ width: '100%', maxWidth: 360, bgcolor: '#E5F3FD' }}>
                     <ListItem>
@@ -41,6 +67,34 @@ export function Contact() {
                         <ListItemText primary={insta} />
                     </ListItem>
                 </List>
+            </Box>
+            <Box sx={{ mb: 4 }} justifyContent="center" alignItems="center">
+                <form onSubmit={handleSubmit}>
+                    <table>
+                        <tr>
+                            <td class="label"><label>First Name</label></td>
+                            <td class="txt"><input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required /></td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label>Last Name</label></td>
+                            <td class="txt"><input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required /></td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label>Contact Number</label></td>
+                            <td class="txt"><input type="text" name="contactNumber" value={formData.contactNumber} onChange={handleChange} required /></td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label>Email</label></td>
+                            <td class="txt"><input id="email" type="email" name="email" value={formData.email} onChange={handleChange} required /></td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label>Message</label></td>
+                            <td class="txt"><textarea name="message" value={formData.message} onChange={handleChange} required /></td>
+                        </tr>
+                    </table>
+                    <br />
+                    <button type="submit" id="submit">Send</button>
+                </form>
             </Box>
             <footer><small>Copyright &copy; Yik Hei Chan 301347095 COMP229-004 Summer2024</small></footer>
         </div>

@@ -1,3 +1,4 @@
+// NavBar.jsx Yik Hei Chan 301347095 30/05/2024
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -85,16 +86,18 @@ function NavBar() {
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
                             sx={{
-                                display: { xs: 'block', md: 'none' },
+                                display: { xs: 'block', md: 'none',  },
                             }}
                         >
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">
-                                        <Link to={`/${page.toLowerCase().replace(' ', '-')}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                    <Link to={`/${page.toLowerCase().replace(' ', '-')}`} >
+                                        <Typography textAlign="center" color='#2267A6'>
+
                                             {page}
-                                        </Link>
-                                    </Typography>
+
+                                        </Typography>
+                                    </Link>
                                 </MenuItem>
                             ))}
                         </Menu>
@@ -131,15 +134,15 @@ function NavBar() {
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
-                            <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: '#2267A6', display: 'block' }}
-                            >
-                                <Link to={`/${page.toLowerCase().replace(' ', '-')}`} style={{ textDecoration: 'none', color: 'inherit', fontWeight: "bold" }}>
+                            <Link to={`/${page.toLowerCase().replace(' ', '-')}`} style={{ textDecoration: 'none', color: 'inherit'}}>
+                                <Button
+                                    key={page}
+                                    onClick={handleCloseNavMenu}
+                                    sx={{ my: 2, color: '#2267A6', display: 'block', fontWeight: "bold" }}
+                                >
                                     {page}
-                                </Link>
-                            </Button>
+                                </Button>
+                            </Link>
                         ))}
                     </Box>
 

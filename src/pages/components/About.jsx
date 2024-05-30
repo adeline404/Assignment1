@@ -1,3 +1,4 @@
+// About.jsx Yik Hei Chan 301347095 30/05/2024
 import * as React from 'react';
 import NavBar from './NavBar.jsx';
 import Zoom from '@mui/material/Zoom';
