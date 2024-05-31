@@ -44,6 +44,15 @@ h1 {
   color: #000066;
 }
 
+h5 {
+  color: #000066;
+}
+
+svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeInherit.css-1vooibu-MuiSvgIcon-root {
+  font-size: larger;
+  height: 1.2em;
+}
+
 p#intro {
   text-align: justify;
   padding-left: 10px;
@@ -63,7 +72,7 @@ form {
   display: block;
 }
 
-table {
+table#contact {
   width: 50%;
   margin: auto;
   border: 2px dotted;

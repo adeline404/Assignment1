@@ -15,7 +15,7 @@ import Link from '@mui/material/Link';
 
 export function Contact() {
     const checked = React.useState(false);
-    const insta = (<Link href="https://www.instagram.com/zzline_/" underline="hover">
+    const insta = (<Link href="https://www.instagram.com/zzline_/" underline="hover" className='link'>
         Instagram
     </Link>);
 
@@ -38,8 +38,13 @@ export function Contact() {
         e.preventDefault();
         // Store form data in local storage
         localStorage.setItem('contactFormData', JSON.stringify(formData));
+        let stored = localStorage.getItem('contactFormData');
+        let fn = JSON.parse(stored);
+        window.alert(`${fn.firstName}, thanks for your message.`);
+        const queryParams = new URLSearchParams(formData).toString();
         // Redirect to Home Page
-        navigate('/');
+        navigate(`/?${queryParams}`);
+
     };
 
     return (
@@ -69,8 +74,8 @@ export function Contact() {
                 </List>
             </Box>
             <Box sx={{ mb: 4 }} justifyContent="center" alignItems="center">
-                <form onSubmit={handleSubmit}>
-                    <table>
+                <form onSubmit={handleSubmit} action="/" method="get">
+                    <table id="contact">
                         <tr>
                             <td class="label"><label>First Name</label></td>
                             <td class="txt"><input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required /></td>

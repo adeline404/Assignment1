@@ -22,7 +22,7 @@ export function About() {
                 In addition to my technical skills, I enjoy exploring new tech trends, participating in coding challenges, and contributing to open-source projects. 
                 I invite you to explore my portfolio to see some of the work I have done and learn more about the services I offer.</p>
             </Box>
-            <Link href={Resume} underline="hover">
+            <Link href={Resume} underline="hover" className='link'>
                 {<h3 id='resume'>Here is my resume</h3>}
             </Link>
             <footer id='about'><small>Copyright &copy; Yik Hei Chan 301347095 COMP229-004 Summer2024</small></footer>
