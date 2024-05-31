@@ -86,7 +86,7 @@ function NavBar() {
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
                             sx={{
-                                display: { xs: 'block', md: 'none',  },
+                                display: { xs: 'block', md: 'none', },
                             }}
                         >
                             {pages.map((page) => (
@@ -134,7 +134,7 @@ function NavBar() {
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
-                            <Link to={`/${page.toLowerCase().replace(' ', '-')}`} style={{ textDecoration: 'none', color: 'inherit'}}>
+                            <Link to={`/${page.toLowerCase().replace(' ', '-')}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                                 <Button
                                     key={page}
                                     onClick={handleCloseNavMenu}

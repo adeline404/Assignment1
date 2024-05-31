@@ -1,7 +1,6 @@
 // main.jsx Yik Hei Chan 301347095 30/05/2024
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-// import App from './App.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -22,10 +21,6 @@ const router = createBrowserRouter([
     path: "/home",
     element: <Home></Home>,
   },
-  // {
-  //   path: "/legacy",
-  //   element: <App></App>,
-  // },
   {
     path: "/about-me",
     element: <About></About>,

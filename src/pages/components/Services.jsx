@@ -17,62 +17,69 @@ export function Services() {
         <div>
             <NavBar />
             <Zoom in={checked}>{<h1>Services</h1>}</Zoom>
+
+            {/* First Service */}
             <Grid container spacing={3} alignItems="center" justifyContent="center">
-                    <Grid item xs="auto">
-                        <Card sx={{ maxWidth: 345, mb: 5 }}>
-                                    <CardMedia
-                                        component="img"
-                                        height="250"
-                                        image={Image1}
-                                        alt="Plushies eCommerce"
-                                    />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h5" component="div" color="#225380">
-                                            General Programming
-                                        </Typography>
-                                        <Typography variant="body2" color="text.secondary">
-                                            C#, C, Java
-                                        </Typography>
-                                    </CardContent>
-                        </Card>
-                    </Grid>
-                    <Grid item xs="auto" justifyContent={'center'}>
-                        <Card sx={{ maxWidth: 345, mb: 5 }}>
-                                    <CardMedia
-                                        component="img"
-                                        height="250"
-                                        image={Image2}
-                                        alt="ERD"
-                                    />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h5" component="div" color="#225380">
-                                            Web Development
-                                        </Typography>
-                                        <Typography variant="body2" color="text.secondary">
-                                            HTML, CSS, Javascript
-                                        </Typography>
-                                    </CardContent>
-                        </Card>
-                    </Grid>
-                    <Grid item xs='auto'>
-                        <Card sx={{ maxWidth: 345, mb: 5 }}>
-                                    <CardMedia
-                                        component="img"
-                                        height="250"
-                                        image={Image3}
-                                        alt="Use Case Diagram"
-                                    />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h5" component="div" color="#225380">
-                                            Database Management
-                                        </Typography>
-                                        <Typography variant="body2" color="text.secondary">
-                                            SQL
-                                        </Typography>
-                                    </CardContent>
-                        </Card>
-                    </Grid>
+                <Grid item xs="auto">
+                    <Card sx={{ maxWidth: 345, mb: 5 }}>
+                        <CardMedia
+                            component="img"
+                            height="250"
+                            image={Image1}
+                            alt="C#"
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="div" color="#225380">
+                                General Programming
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                C#, C, Java
+                            </Typography>
+                        </CardContent>
+                    </Card>
                 </Grid>
+
+                {/* Second Service */}
+                <Grid item xs="auto" justifyContent={'center'}>
+                    <Card sx={{ maxWidth: 345, mb: 5 }}>
+                        <CardMedia
+                            component="img"
+                            height="250"
+                            image={Image2}
+                            alt="Javascript"
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="div" color="#225380">
+                                Web Development
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                HTML, CSS, Javascript
+                            </Typography>
+                        </CardContent>
+                    </Card>
+                </Grid>
+                
+                {/* Third Service */}
+                <Grid item xs='auto'>
+                    <Card sx={{ maxWidth: 345, mb: 5 }}>
+                        <CardMedia
+                            component="img"
+                            height="250"
+                            image={Image3}
+                            alt="SQL query"
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="div" color="#225380">
+                                Database Management
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                SQL
+                            </Typography>
+                        </CardContent>
+                    </Card>
+                </Grid>
+            </Grid>
+            
             <footer><small>Copyright &copy; Yik Hei Chan 301347095 COMP229-004 Summer2024</small></footer>
         </div>
 

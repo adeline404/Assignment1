@@ -51,6 +51,8 @@ export function Contact() {
         <div>
             <NavBar />
             <Zoom in={checked}>{<h1>Contact Me</h1>}</Zoom>
+
+            {/* Contact Information Panel */}
             <Box mb={4} display="flex" justifyContent="center" alignItems="center">
                 <List sx={{ width: '100%', maxWidth: 360, bgcolor: '#E5F3FD' }}>
                     <ListItem>
@@ -73,6 +75,8 @@ export function Contact() {
                     </ListItem>
                 </List>
             </Box>
+
+            {/* Interative Form */}
             <Box sx={{ mb: 4 }} justifyContent="center" alignItems="center">
                 <form onSubmit={handleSubmit} action="/" method="get">
                     <table id="contact">
@@ -101,6 +105,7 @@ export function Contact() {
                     <button type="submit" id="submit">Send</button>
                 </form>
             </Box>
+            
             <footer><small>Copyright &copy; Yik Hei Chan 301347095 COMP229-004 Summer2024</small></footer>
         </div>
 
